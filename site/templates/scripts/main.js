@@ -589,30 +589,6 @@ var rescaleImages = function() {
   });
 };
 
-var resizeItemNavBar = function() {
-  var $bar = $('.pn-ProductNav_Wrapper'),
-      barWidth = $bar.width(),
-      winWidth = $(window).width();
-
-
-  if (barWidth >= winWidth) {
-    // if bar is wider than window
-    console.log('bar is wider than window, adjusting');
-    $bar.css({
-      'transform' : 'none',
-      'left'      : '0',
-      'right'     : '0'
-    });
-  } /*else {
-    // if bar is narrower than window
-    console.log('bar is narrower than window, adjusting');
-    $bar.css({
-      'transform' : 'translateX(-50%)',
-      'left'      : '50%',
-      'right'     : 'initial'
-    });
-  }*/
-};
 function listenForCompletedAssetLoading() {
   var assetsLoaded = false;
   // Initialize Progress and show LoadingOverlay
@@ -642,6 +618,13 @@ function listenForCompletedAssetLoading() {
 
 }
 
+var preselectFirstItemOfEachCatagory = function() {
+    for (var i = 0; i < settings.numbOfGroups; i++) {
+        var dataID = 'group' + (i+1) + '-0';
+        $('[data-id="'+dataID+'"]').click();
+    }
+};
+
 $(function(){
 
   listenForCompletedAssetLoading();
@@ -660,10 +643,9 @@ $(function(){
 
   bindItemSelectClicks();
   attachEventListeners();
-  
-	$(window).resize(function(){
+  preselectFirstItemOfEachCatagory();
+  $(window).resize(function(){
     rescaleImages();
-    //resizeItemNavBar();
   });
   $(window).resize();
 
