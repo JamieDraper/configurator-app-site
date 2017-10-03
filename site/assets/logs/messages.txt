@@ -1,0 +1,1 @@
+2017-09-04 19:19:37	admin	http://jamiedraper.com/configurator-app/admin/setup/template/removeFields	Deleted field "groups" data in 1 row(s) from 1 page(s). [page-by-page]
