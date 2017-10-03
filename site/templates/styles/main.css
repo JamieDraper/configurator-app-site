@@ -6,9 +6,7 @@ body {
   background-repeat:no-repeat;
   margin: 0;
 }
-.combinator-container {
-  display: none; /* show using js when page loaded */
-}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
