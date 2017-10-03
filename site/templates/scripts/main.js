@@ -426,7 +426,7 @@ var handleCategorySelectClick = function($categorySelectIcon, $itemSelectBar, $c
 		$itemSelectBar.hide();
 		return;
 	}
-  resizeItemNavBar();
+  //resizeItemNavBar();
   $categoryIcons.removeClass('is-active');
   $categorySelectIcon.toggleClass('is-active');
   $itemSelectBar.show();
@@ -663,7 +663,7 @@ $(function(){
   
 	$(window).resize(function(){
     rescaleImages();
-    resizeItemNavBar();
+    //resizeItemNavBar();
   });
   $(window).resize();
 

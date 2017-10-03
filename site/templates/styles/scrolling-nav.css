@@ -18,11 +18,7 @@
     bottom: 160px;
     left: 50%;
     transform: translateX(-50%);
-}
-@media screen and (max-width: 710px) {
-    .pn-ProductNav_Wrapper {
-        margin: 0 5px;
-    }
+    width: 100%;
 }
 .pn-ProductNav_Link {
     border:none;
