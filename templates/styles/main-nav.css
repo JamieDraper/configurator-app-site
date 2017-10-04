@@ -1,0 +1,98 @@
+/* CURRENTLY EQUIPPED MENU */
+.currently-equipped-bar div.icon{
+   border-radius:60%; position:relative;
+    width:70px; height:70px;
+display: inline-block;
+    overflow:hidden;
+  background-size: cover;
+  margin: 0 3px;
+}
+.currently-equipped-bar div.icon:after{
+    content:'';
+    position:absolute;
+    left:3px; top:3px;
+    border-radius:100%;
+    width:64px; height:64px;
+    box-shadow: 0px 0px 0px 2000px #D3C3B9;
+}
+.currently-equipped-bar .icon.has-selection {
+    background-image: url(https://www.potterybarn.com/pbimgs/ab/images/dp/wcm/201712/0074/trieste-side-chair-o.jpg);
+}
+.currently-equipped-bar .icon.has-selection:after {
+    box-shadow:none;
+}
+.currently-equipped-bar {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+/* CATAGORY SELECT MENU */
+.category-select-bar {
+  position: fixed;
+  bottom: 78px;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+.category-select-bar .icon {
+  background: #C5C5C5;
+  height: 70px;
+  width: 70px;
+  display: inline-block;
+  border-radius: 50%;
+  position:relative;
+  border: 4px solid transparent;
+  -moz-transition: border-color 0.1s;
+  -o-transition: border-color 0.1s;
+  transition: border-color 0.1s;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 3px;
+}
+.category-select-bar .icon .glyphicon {
+  position: absolute;
+  transform: rotate(-90deg);
+  color: white;
+  left: 23px;
+  top:-12px;
+  z-index:0;
+  opacity: 0;
+  -moz-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+.category-select-bar .icon label {
+    position: relative;
+    top: 40px;
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.category-select-bar .icon:hover {
+  border:4px solid #e2e2e4;
+}
+.category-select-bar .icon.is-active, .category-select-bar .icon.is-active:hover {
+  border:4px solid white;
+}
+.category-select-bar .icon.is-active .glyphicon {
+  opacity: 1;
+}
+.category-select-bar .icon.is-active label {
+  font-weight: bold;
+}
+
+.category-select-bar .icon:nth-child(1) {
+  background-image: url('../assets/buttons_and_ui/Button_Option_Doors.png');
+}
+.category-select-bar .icon:nth-child(2) {
+  background-image: url('../assets/buttons_and_ui/Button_Option_Worktop.png');
+}
+.category-select-bar .icon:nth-child(3) {
+  background-image: url('../assets/buttons_and_ui/Button_Option_Handles.png');
+}
